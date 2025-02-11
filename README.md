@@ -45,12 +45,14 @@ Access control ensures only HR personnel can retrieve sensitive documents for Th
 
 1.2.Name your bucket (for example document-management-system).
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/d3bef7be1e50c1283118c90b906a849c31a26dd1/img/Screenshot%202025-02-11%20150924.png)
 
 1.3.Enable Versioning (optional but recommended for document management).
 
 Keep other settings as default.
 
+
+1.3.Once our bucket is successfully created we need to edit our bucket policy
 
 
 1.2.Create a Bucket Policy:
@@ -84,5 +86,35 @@ Now Replace `YOUR_ACCOUNT_ID` and `YOUR_LAMBDA_ROLE_NAME` with your AWS account 
 
 
 ## Step 2: Set Up DynamoDB for Metadata
+
+2.1.In the AWS Management Console navigate to DynamoBD
+
+2.2.Create a DynamoDB Table:
+
+2.3.Go to DynamoDB > Create table.
+
+Name the table DocumentMetadata.
+
+Set the Primary Key as DocumentID (String).
+
+![image_alt]()
+
+Keep other settings as default
+
+2.4.Our Table is successfully created
+
+![image_alt]()
+
+
+
+## Step 3: Lets write Lambda Functions
+
+3.1.We’ll create three Lambda functions for Upload, Download, and Delete operations.
+
+
+
+
+
+
 
 
