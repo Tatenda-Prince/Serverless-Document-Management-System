@@ -107,7 +107,7 @@ Keep other settings as default
 
 
 
-## Step 3: Lets write Lambda Functions
+## Step 3: Lets create Lambda Functions
 
 3.1.We’ll create three Lambda functions for Upload, Download, and Delete operations.
 
@@ -162,12 +162,137 @@ json
 
 ```
 
-3.5.Create a lambda role and attach your custom policy
+3.5.Create a lambda role and attach your custom policy give it name.
 
 
 3.6.Head back to the Lambda’s “Create function” window. Refresh the existing roles, select the role previously created, then click “Create Function”.
 
 ![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/e8ba2704f99c3a0cdaf472838fcbf762d84e1fdd/img/Screenshot%202025-02-11%20151629.png)
+
+
+## Step 4 : Write the Lambda Function Code
+
+4.1.Function Name: `UploadDocument`
+
+Replace the default code with the following Python script:
+
+```python
+import json
+import boto3
+import uuid
+from datetime import datetime
+
+s3 = boto3.client('s3')
+dynamodb = boto3.resource('dynamodb')
+table = dynamodb.Table('DocumentMetadata')
+
+def lambda_handler(event, context):
+    # Parse the file and metadata from the request
+    file_content = event['body']
+    file_name = event['headers']['file-name']
+    file_size = event['headers']['file-size']
+    
+    # Generate a unique document ID
+    document_id = str(uuid.uuid4())
+    
+    # Upload the file to S3
+    s3.put_object(
+        Bucket='tatenda-document-management-system',
+        Key=document_id,
+        Body=file_content
+    )
+    
+    # Save metadata in DynamoDB
+    table.put_item(Item={
+        'DocumentID': document_id,
+        'FileName': file_name,
+        'FileSize': file_size,
+        'UploadDate': datetime.now().isoformat()
+    })
+    
+    return {
+        'statusCode': 200,
+        'body': json.dumps({'DocumentID': document_id})
+    }
+```
+
+
+4.2.Create another lambda function Download Document
+
+Function Name: `DownloadDocument`
+
+Replace the default code with the following Python script:
+
+```python
+
+import json
+import boto3
+
+s3 = boto3.client('s3')
+dynamodb = boto3.resource('dynamodb')
+table = dynamodb.Table('DocumentMetadata')
+
+def lambda_handler(event, context):
+    # Get the document ID from the request
+    document_id = event['queryStringParameters']['DocumentID']
+    
+    # Retrieve the file from S3
+    file_object = s3.get_object(
+        Bucket='tatenda-document-management-system',
+        Key=document_id
+    )
+    file_content = file_object['Body'].read()
+    
+    # Retrieve metadata from DynamoDB
+    metadata = table.get_item(Key={'DocumentID': document_id})['Item']
+    
+    return {
+        'statusCode': 200,
+        'headers': {
+            'Content-Type': 'application/octet-stream',
+            'Content-Disposition': f'attachment; filename="{metadata["FileName"]}"'
+        },
+        'body': file_content,
+        'isBase64Encoded': True
+    }
+```
+
+
+4.3.Create another lambda function Delete Document
+
+Function Name: `DeleteDocument`
+
+```python
+import json
+import boto3
+
+s3 = boto3.client('s3')
+dynamodb = boto3.resource('dynamodb')
+table = dynamodb.Table('DocumentMetadata')
+
+def lambda_handler(event, context):
+    # Get the document ID from the request
+    document_id = event['queryStringParameters']['DocumentID']
+    
+    # Delete the file from S3
+    s3.delete_object(
+        Bucket='tatenda-document-management-system',
+        Key=document_id
+    )
+    
+    # Delete metadata from DynamoDB
+    table.delete_item(Key={'DocumentID': document_id})
+    
+    return {
+        'statusCode': 200,
+        'body': json.dumps({'message': 'Document deleted successfully'})
+    }
+
+```
+
+
+
+
 
 
 
