@@ -35,7 +35,7 @@ The Cloud-Based Document Management System leverages AWS serverless services to 
 
 ## Use Case 
 
-You work at Up the Chelsea Corp as the Cloud Engineer for the company you tasked with securing storage for employee records, payroll documents, and contracts.
+You work at Up the Chelsea Corp as the Cloud Engineer for the company you are tasked with securing storage for employee records, payroll documents, and contracts.
 Access control ensures only HR personnel can retrieve sensitive documents for The Humana Resource (HR) Department.
 
 
@@ -95,7 +95,7 @@ Now Replace `YOUR_ACCOUNT_ID` and `YOUR_LAMBDA_ROLE_NAME` with your AWS account 
 
 Name the table DocumentMetadata.
 
-Set the Primary Key as DocumentID (String).
+We set the Primary Key as DocumentID (String).
 
 ![image_alt]()
 
