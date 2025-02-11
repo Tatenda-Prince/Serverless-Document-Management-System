@@ -290,6 +290,61 @@ def lambda_handler(event, context):
 
 ```
 
+## Step 5: lets Set Up API Gateway
+
+5.1.In the AWS Management Console, head to the AWS API Gateway dashboard.
+
+5.2.Create a REST API:
+
+Go to API Gateway > Create API > REST API.
+
+![image_alt]()
+
+
+Name your API ( for example DocumentManagementAPI).
+
+
+![image_alt]()
+
+
+5.3.Create Resources and Methods:
+
+Create a resource (e.g., /documents).
+
+![image_alt]()
+
+
+5.4.Add the following methods:
+
+POST (for uploading documents).
+
+
+![image_alt]()
+
+
+
+GET (for downloading documents).
+
+
+![image_alt]()
+
+
+DELETE (for deleting documents).
+
+![image_alt]()
+
+5.5.Deploy the API:
+
+Deploy the API to a stage (e.g., prod).
+
+
+
+
+
+
+
+
+
 
 
 
