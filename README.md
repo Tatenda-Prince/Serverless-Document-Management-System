@@ -358,7 +358,7 @@ Click Send
 
 Now lets verify if the our documents metadata were successfully uploaded 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/5590312f0939fb9688603ac44a54a7d5f9f08f6e/img/Screenshot%202025-02-11%20183259.png)
 
 
 Check  your DynamoDB if the metadata was saved 
