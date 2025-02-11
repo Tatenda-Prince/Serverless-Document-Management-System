@@ -304,7 +304,7 @@ Go to API Gateway > Create API > REST API.
 Name your API ( for example DocumentManagementAPI).
 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/b5565c4edc89334256c6eb0414355339dbe7fdd3/img/Screenshot%202025-02-11%20152648.png)
 
 
 5.3.Create Resources and Methods:
