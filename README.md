@@ -331,11 +331,23 @@ GET (for downloading documents).
 
 DELETE (for deleting documents).
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/3d3a2f2e86c2f46782df3f45f0c51797b10b56bd/img/Screenshot%202025-02-11%20153033.png)
 
 5.5.Deploy the API:
 
 Deploy the API to a stage (e.g., prod).
+
+
+## Step 6: Test the System Using Postman
+
+
+
+
+
+
+
+
+
 
 
 
