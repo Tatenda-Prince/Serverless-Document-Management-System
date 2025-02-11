@@ -400,7 +400,7 @@ Click Send.
 
 Output: See example below 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/60b803cea2739e458c97730ac71217516f3500eb/img/Screenshot%202025-02-11%20190703.png)
 
 
 
