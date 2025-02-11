@@ -103,13 +103,78 @@ Keep other settings as default
 
 2.4.Our Table is successfully created
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/ebab46b05416b316b8a7563bfda9629e2e1ef1c7/img/Screenshot%202025-02-11%20151458.png)
 
 
 
 ## Step 3: Lets write Lambda Functions
 
 3.1.We’ll create three Lambda functions for Upload, Download, and Delete operations.
+
+3.2.In the AWS Management Console, head to the AWS Lambda dashboard.
+
+3.3.Function Name: UploadDocument
+
+Runtime: Python 3.x
+
+![image_alt]()
+
+3.4.In the Management Console, head to the IAM dashboard and click on policy and create a policy.
+
+copy this policy below
+
+```language
+
+json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject"
+            ],
+            "Resource": "arn:aws:s3:::your-s3-bucket-name/*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:PutItem",
+                "dynamodb:GetItem",
+                "dynamodb:DeleteItem",
+                "dynamodb:Scan"
+            ],
+            "Resource": "arn:aws:dynamodb:your-region:your-account-id:table/your-dynamodb-table-name"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "arn:aws:logs:your-region:your-account-id:log-group:/aws/lambda/your-lambda-function-name:*"
+        }
+    ]
+}
+
+```
+
+3.5.Create a lambda role and attach your custom policy
+
+
+3.6.Head back to the Lambda’s “Create function” window. Refresh the existing roles, select the role previously created, then click “Create Function”.
+
+![image_alt]()
+
+
+
+
+
+
+
 
 
 
