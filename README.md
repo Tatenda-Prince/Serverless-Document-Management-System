@@ -298,7 +298,7 @@ def lambda_handler(event, context):
 
 Go to API Gateway > Create API > REST API.
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/cec3a20e4fb49bd765e61cb3ad240ef97cc55ff5/img/Screenshot%202025-02-11%20152622.png)
 
 
 Name your API ( for example DocumentManagementAPI).
