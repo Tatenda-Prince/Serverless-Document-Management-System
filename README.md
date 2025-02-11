@@ -311,7 +311,7 @@ Name your API ( for example DocumentManagementAPI).
 
 Create a resource (e.g., /documents).
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/c265e858fe43248f4794a8d1c291ea6eeae2be77/img/Screenshot%202025-02-11%20152742.png)
 
 
 5.4.Add the following methods:
