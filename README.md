@@ -117,7 +117,7 @@ Keep other settings as default
 
 Runtime: Python 3.x
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/e5efda80205d6e841ad03f9881b328e81fec4546/img/Screenshot%202025-02-11%20151607.png)
 
 3.4.In the Management Console, head to the IAM dashboard and click on policy and create a policy.
 
