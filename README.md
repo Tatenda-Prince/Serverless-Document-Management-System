@@ -340,7 +340,8 @@ Deploy the API to a stage (e.g., prod).
 
 ## Step 6: Test the System Using Postman
 
-1.lets Upload a Document
+
+## lets Upload a Document
 
 Method: `POST`
 
@@ -366,9 +367,48 @@ Check  your DynamoDB if the metadata was saved
 ![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/d8665cd8ef8f14beae5e5bbd71507f1fa8f011c4/img/Screenshot%202025-02-11%20183909.png)
 
 
-check your Amazon if the documenta were successfully saved
+check your Amazon S3 if the documenta were successfully saved
 
 ![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/e20e3ad4b695f801c2f00024bf912e053b141998/img/Screenshot%202025-02-11%20183855.png)
+
+
+## Lets Test Downloading a Document
+
+Open a new tab in Postman.
+
+Set the request method to GET.
+
+Enter the URL: https://YOUR_API_ID.execute-api.YOUR_REGION.amazonaws.com/prod/documents?DocumentID=123e4567-e89b-12d3-a456-426614174000.
+
+Click Send.
+
+
+Output: See example below 
+
+![image_alt]()
+
+
+## Test Deleting a Document
+
+Open a new tab in Postman.
+
+Set the request method to DELETE.
+
+Enter the URL: https://YOUR_API_ID.execute-api.YOUR_REGION.amazonaws.com/prod/documents?DocumentID=123e4567-e89b-12d3-a456-426614174000.
+
+Click Send.
+
+Output: See example below 
+
+![image_alt]()
+
+
+
+
+
+
+
+
 
 
 
