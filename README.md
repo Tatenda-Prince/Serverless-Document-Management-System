@@ -167,7 +167,7 @@ json
 
 3.6.Head back to the Lambda’s “Create function” window. Refresh the existing roles, select the role previously created, then click “Create Function”.
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/e8ba2704f99c3a0cdaf472838fcbf762d84e1fdd/img/Screenshot%202025-02-11%20151629.png)
 
 
 
