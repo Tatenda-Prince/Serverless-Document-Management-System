@@ -340,6 +340,44 @@ Deploy the API to a stage (e.g., prod).
 
 ## Step 6: Test the System Using Postman
 
+1.lets Upload a Document
+
+Method: `POST`
+
+URL: `https://YOUR_API_ID.execute-api.YOUR_REGION.amazonaws.com/prod/documents`
+
+Headers:
+
+`file-name: example.txt`
+
+`file-size: 1024`
+
+Body: Attach the file as binary data.
+
+Click Send
+
+Now lets verify if the our documents metadata were successfully uploaded 
+
+![image_alt]()
+
+
+Check  your DynamoDB if the metadata was saved 
+
+![image_alt]()
+
+
+check your Amazon if the documenta were successfully saved
+
+![image_alt]()
+
+
+
+
+
+
+
+
+
 
 
 
