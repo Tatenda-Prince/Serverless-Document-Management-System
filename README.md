@@ -326,7 +326,7 @@ POST (for uploading documents).
 GET (for downloading documents).
 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/c43a7a7956e5d994d752d886244dfcb5914f44f5/img/Screenshot%202025-02-11%20152937.png)
 
 
 DELETE (for deleting documents).
