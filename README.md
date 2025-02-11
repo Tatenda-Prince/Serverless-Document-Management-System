@@ -385,7 +385,7 @@ Click Send.
 
 Output: See example below 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/dc6c66329e0c5e2fbf15fb201c92e9ce601958f5/img/Screenshot%202025-02-11%20190303.png)
 
 
 ## Test Deleting a Document
