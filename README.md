@@ -363,7 +363,7 @@ Now lets verify if the our documents metadata were successfully uploaded
 
 Check  your DynamoDB if the metadata was saved 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/d8665cd8ef8f14beae5e5bbd71507f1fa8f011c4/img/Screenshot%202025-02-11%20183909.png)
 
 
 check your Amazon if the documenta were successfully saved
