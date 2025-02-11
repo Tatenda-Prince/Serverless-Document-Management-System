@@ -368,7 +368,7 @@ Check  your DynamoDB if the metadata was saved
 
 check your Amazon if the documenta were successfully saved
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/e20e3ad4b695f801c2f00024bf912e053b141998/img/Screenshot%202025-02-11%20183855.png)
 
 
 
