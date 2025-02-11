@@ -97,7 +97,7 @@ Name the table DocumentMetadata.
 
 We set the Primary Key as DocumentID (String).
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/4eb121799732329d641c6e0b1a5974fabdd3115d/img/Screenshot%202025-02-11%20151424.png)
 
 Keep other settings as default
 
