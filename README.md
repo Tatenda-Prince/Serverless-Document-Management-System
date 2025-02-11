@@ -319,7 +319,7 @@ Create a resource (e.g., /documents).
 POST (for uploading documents).
 
 
-![image_alt]()
+![image_alt](https://github.com/Tatenda-Prince/Serverless-Document-Management-System/blob/cad99c500e0ccec012d731c3fac46c41592f189a/img/Screenshot%202025-02-11%20152844.png)
 
 
 
